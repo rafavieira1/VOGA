@@ -1,29 +1,28 @@
 import { Sparkles, Hand, Scissors, Gem, Palette, Brush } from "lucide-react";
 
 // ─── IMAGENS (substitua pelos arquivos reais do cliente) ─────────────────────
-import heroImage from "@/assets/herosec.png";
-import aboutImage from "@/assets/sobre.jpg";
-import ctaImage from "@/assets/procanto.png";
-import numerosImage from "@/assets/numeros.avif";
+import heroImage from "@/assets/herosec.avif";
+import aboutImage from "@/assets/sobre.avif";
+import ctaImage from "@/assets/procanto.avif";
 
 // Serviços — imagens das categorias
-import cuidadosImg from "@/assets/maquiagem.jpg";
-import rituaisImg from "@/assets/unhas.jpg";
-import capilaresImg from "@/assets/serviçocabelo.jpg";
+import cuidadosImg from "@/assets/maquiagem.avif";
+import rituaisImg from "@/assets/unhas.avif";
+import capilaresImg from "@/assets/serviçocabelo.avif";
 
 // Galeria
-import skin1 from "@/assets/sobrancelha1.jpg";
-import skin2 from "@/assets/sobrancelha2.jpg";
-import skin3 from "@/assets/sobrancelha3.jpg";
-import loiro1 from "@/assets/loiro1.jpg";
-import loiro2 from "@/assets/loiro2.jpg";
-import loiro3 from "@/assets/loiro3.jpg";
-import make1 from "@/assets/maquiagem1.jpg";
-import make2 from "@/assets/maquiagem2.jpg";
-import make3 from "@/assets/maquiagem3.jpg";
-import spa1 from "@/assets/unhas.jpg";
-import spa2 from "@/assets/unha2.jpg";
-import spa3 from "@/assets/unha3.jpg";
+import skin1 from "@/assets/sobrancelha1.avif";
+import skin2 from "@/assets/sobrancelha2.avif";
+import skin3 from "@/assets/sobrancelha3.avif";
+import loiro1 from "@/assets/loiro1.avif";
+import loiro2 from "@/assets/loiro2.avif";
+import loiro3 from "@/assets/loiro3.avif";
+import make1 from "@/assets/maquiagem1.avif";
+import make2 from "@/assets/maquiagem2.avif";
+import make3 from "@/assets/maquiagem3.avif";
+import spa1 from "@/assets/unhas.avif";
+import spa2 from "@/assets/unha2.avif";
+import spa3 from "@/assets/unha3.avif";
 
 // ─── TIPOS ───────────────────────────────────────────────────────────────────
 type GaleriaLayout = "left" | "right" | "center";
@@ -46,7 +45,7 @@ export const CLIENT = {
   nome: "VOGA",
   slogan: "Você em evidência — Cabelo, Barbearia, Unhas, Estética e bem-estar",
   cidade: "Medianeira, PR",
-  whatsapp: "5545999999999", // Mantido para Schema SEO interno
+  whatsapp: "554599129695", // Mantido para Schema SEO interno
   whatsappLink: "https://api.whatsapp.com/message/JK5LZRY4PK7AE1?autoload=1&app_absent=0",
   instagram: "@vogacentroestetico",
   facebook: "voga.byaurora", // ex: "vogacentroestetico" (deixe vazio para ocultar)
@@ -76,7 +75,7 @@ export const CLIENT = {
   sobre: {
     titulos: ["VOCÊ", "EM", "EVIDÊNCIA"],
     descricao:
-      "nasceu com o propósito de transformar o cuidado estético em uma experiência sensorial única. Com atendimento humanizado e profissionais altamente qualificados, cada detalhe é pensado para realçar sua melhor versão — do cuidado personalizado ao conforto dos nossos ambientes.",
+      "nasceu com o propósito de transformar o cuidado estético em uma experiência sensorial única. Com atendimento humanizado e profissionais altamente qualificados, cada detalhe é pensado para realçar sua melhor versão. Do cuidado personalizado ao conforto dos nossos ambientes.",
     // A descrição usa CLIENT.nome automaticamente: "O {nome} nasceu com..."
     imagem: aboutImage,
     estatisticas: [
@@ -170,7 +169,7 @@ export const CLIENT = {
   depoimentos: [
     {
       nome: "Ana Clara",
-      papel: "Cliente Fiel",
+      papel: "Cliente",
       avatar: "https://i.pravatar.cc/150?img=47",
       nota: 5,
       texto: "Hoje eu tive o prazer de conhecer o salão VOGA. Que aconchego!! Fui muito bem recebida os profissionais foram maravilhosos super atenciosos.A profissional Ruth foi quem me atendeu para corte e eu simplesmente amei. Entendeu o que eu realmente queria fazer. E ficou maravilhoooosoooo!!! Super indico",
@@ -197,15 +196,6 @@ export const CLIENT = {
       texto: "Atendimento excelente. O ambiente está lindo e a energia dos profissionais é maravilhosa. Rudinei é incrível! Meu cabeleireiro há anos, entende meu estilo e o que eu gosto, me dá ótimas dicas e sempre supera minhas expectativas. Recomendo de verdade!",
     },
   ],
-
-  // ── Estatísticas (seção de números) ────────────────────────────────────────
-  estatisticas: {
-    imagem: numerosImage,
-    itens: [
-      { valor: 3, sufixo: "+", label: "Anos de excelência" },
-      { valor: 3000, sufixo: "+", label: "Clientes atendidos" },
-    ],
-  },
 
   // ── FAQ ─────────────────────────────────────────────────────────────────────
   faq: [

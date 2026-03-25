@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, X } from "lucide-react";
 import { CLIENT } from "@/config/client";
-import fundoverde from "@/assets/fundoverde.png";
+import fundoverde from "@/assets/fundoverde.avif";
 
 const galleryItems = CLIENT.galeria;
 
@@ -167,9 +167,8 @@ export default function Galeria() {
 
               {/* BOTTOM CONTROLS (Dots and Arrows) */}
               <div
-                className={`absolute bottom-8 sm:bottom-12 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 z-30 ${
-                  item.layout === "right" ? "left-0 w-[45%] sm:w-[50%]" : "right-0 w-[45%] sm:w-[50%]"
-                }`}
+                className={`absolute bottom-8 sm:bottom-12 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 z-30 ${item.layout === "right" ? "left-0 w-[45%] sm:w-[50%]" : "right-0 w-[45%] sm:w-[50%]"
+                  }`}
               >
                 {/* Arrows Funcionais */}
                 <div className="flex gap-3 sm:gap-4 text-[#161117]">
@@ -194,9 +193,8 @@ export default function Galeria() {
                   {item.images.map((_, dotIdx) => (
                     <div
                       key={dotIdx}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        activeIndexes[i] === dotIdx ? 'w-4 bg-[#234932]' : 'w-1.5 bg-[#234932]/30'
-                      }`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeIndexes[i] === dotIdx ? 'w-4 bg-[#234932]' : 'w-1.5 bg-[#234932]/30'
+                        }`}
                     />
                   ))}
                 </div>

@@ -34,8 +34,8 @@ export function NavBar({ items, activeTab, onTabChange, className }: NavBarProps
             onClick={() => onTabChange(item.name)}
             className={cn(
               "relative cursor-pointer text-sm font-semibold px-3 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full transition-colors",
-              "text-foreground/80 hover:text-primary",
-              isActive && "bg-muted text-primary",
+              "text-[#f4eee0]/70 hover:text-[#f4eee0]",
+              isActive && "bg-[#f4eee0] text-[#234932] hover:text-[#234932]",
             )}
           >
             <span className="hidden md:inline">{item.name}</span>
@@ -45,7 +45,7 @@ export function NavBar({ items, activeTab, onTabChange, className }: NavBarProps
             {isActive && (
               <motion.div
                 layoutId="tubelight"
-                className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
+                className="absolute inset-0 w-full bg-[#f4eee0]/5 rounded-full -z-10"
                 initial={false}
                 transition={{
                   type: "spring",
@@ -53,7 +53,7 @@ export function NavBar({ items, activeTab, onTabChange, className }: NavBarProps
                   damping: 30,
                 }}
               >
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-[#f4eee0] rounded-t-full">
                 </div>
               </motion.div>
             )}

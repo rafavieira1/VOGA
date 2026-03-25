@@ -5,7 +5,6 @@ import Sobre from "@/components/pages/Sobre";
 import Servicos from "@/components/pages/Servicos";
 import Galeria from "@/components/pages/Galeria";
 import Depoimentos from "@/components/pages/Depoimentos";
-import Estatisticas from "@/components/pages/Estatisticas";
 import AgendamentoFAQ from "@/components/pages/AgendamentoFAQ";
 import SocialCTA from "@/components/pages/SocialCTA";
 import Localizacao from "@/components/pages/Localizacao";
@@ -117,7 +116,6 @@ const Index = () => {
         <Servicos />
         <Galeria />
         <Depoimentos />
-        {/* <Estatisticas /> */}
         <AgendamentoFAQ />
         <SocialCTA />
         <Localizacao />

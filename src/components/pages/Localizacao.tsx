@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import fundoverde from "@/assets/fundoverde.png";
+import fundoverde from "@/assets/fundoverde.avif";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

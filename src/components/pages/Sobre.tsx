@@ -1,7 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import fundoverde from "@/assets/fundoverde.png";
+import fundoverde from "@/assets/fundoverde.avif";
 
 export default function Sobre() {
   const container: Variants = {
@@ -41,10 +41,10 @@ export default function Sobre() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col lg:flex-row lg:items-stretch justify-between gap-10 lg:gap-8"
+          className="flex flex-col lg:flex-row lg:items-stretch justify-center gap-10 lg:gap-0"
         >
           {/* Left: Titles */}
-          <motion.div variants={fadeUp} className="flex-1 w-full lg:text-right relative mt-0 flex flex-col justify-center gap-2">
+          <motion.div variants={fadeUp} className="flex-1 w-full lg:text-right relative mt-0 flex flex-col justify-center gap-2 lg:pr-8 xl:pr-12">
             <h2 className="text-[12vw] sm:text-[11vw] lg:text-5xl xl:text-6xl 2xl:text-[6.5rem] font-normal leading-[1.1] tracking-tight text-[#161117] flex flex-col">
               {CLIENT.sobre.titulos.map((titulo, i) => (
                 <span key={i}>{titulo}</span>
@@ -64,7 +64,7 @@ export default function Sobre() {
           </motion.div>
 
           {/* Right: Content & Stats */}
-          <motion.div variants={fadeUp} className="flex-1 w-full mx-auto max-w-xl lg:max-w-md xl:max-w-lg flex flex-col lg:justify-between items-start lg:pl-4 xl:pl-8">
+          <motion.div variants={fadeUp} className="flex-1 w-full mx-auto max-w-xl lg:max-w-none flex flex-col lg:justify-between items-start lg:pl-8 xl:pl-12">
             <div className="flex flex-col items-start w-full">
               <p className="text-[15px] sm:text-base text-[#161117]/70 font-medium leading-relaxed mb-10 text-justify sm:text-left">
                 O {CLIENT.nome} {CLIENT.sobre.descricao}

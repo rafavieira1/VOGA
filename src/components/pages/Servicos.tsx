@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { NavBar } from "@/components/ui/tubelight-navbar";
-import fundoverde from "@/assets/fundoverde.png";
+import fundoverde from "@/assets/fundoverde.avif";
 
 const categorias = CLIENT.categoriasServicos.map((cat) => ({
   ...cat,
@@ -108,10 +108,9 @@ export default function Servicos() {
             {/* RIGHT — Services List */}
             <div className="lg:w-[55%] flex flex-col justify-center">
               <div className="flex items-center justify-between mb-8">
-                <p className="text-xs font-bold tracking-widest uppercase text-[#e7b167]/70">
-                  {active.services.length}{" "}
-                  {active.services.length === 1 ? "serviço" : "serviços"}{" "}
-                  disponíveis
+                <p className="text-xs font-bold tracking-widest uppercase text-[#e7b167]/70 flex items-center gap-1">
+                  <span className="font-['Lora'] font-medium text-base leading-none tracking-normal">{active.services.length}</span>
+                  <span>{active.services.length === 1 ? "serviço" : "serviços"} disponíveis</span>
                 </p>
                 <div className="h-px flex-1 bg-[#e7b167]/20 ml-6" />
               </div>
@@ -135,7 +134,7 @@ export default function Servicos() {
                           {servico.nome}
                         </h4>
                         {(servico as any).preco && (
-                          <span className="text-sm lg:text-base font-semibold text-[#e7b167] px-3 py-1 rounded-full bg-[#e7b167]/10 whitespace-nowrap self-start sm:self-auto border border-[#e7b167]/20">
+                          <span className="font-['Lora'] font-medium tracking-tight text-sm lg:text-base text-[#e7b167] px-3 py-1 rounded-full bg-[#e7b167]/10 whitespace-nowrap self-start sm:self-auto border border-[#e7b167]/20">
                             {(servico as any).preco}
                           </span>
                         )}

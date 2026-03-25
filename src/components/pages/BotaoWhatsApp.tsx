@@ -9,7 +9,7 @@ export default function BotaoWhatsApp() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group fixed bottom-6 right-6 z-40"
+      className="group fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40"
       aria-label="Fale conosco pelo WhatsApp"
     >
       {/* Tooltip */}
@@ -17,10 +17,10 @@ export default function BotaoWhatsApp() {
         Fale conosco
       </span>
       <div
-        className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
         style={{ animation: "whatsapp-pulse 2s infinite" }}
       >
-        <MessageCircle className="text-primary-foreground" size={30} />
+        <MessageCircle className="text-primary-foreground" size={26} />
       </div>
     </a>
   );

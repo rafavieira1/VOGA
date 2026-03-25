@@ -22,7 +22,7 @@ export default function Footer() {
   const whatsappUrl = CLIENT.whatsappLink;
 
   return (
-    <footer className="relative overflow-hidden bg-[#ede7d9] pt-12 lg:pt-24 pb-20 lg:pb-48 flex flex-col justify-end">
+    <footer className="relative overflow-hidden bg-[#ede7d9] pt-10 sm:pt-12 lg:pt-24 pb-16 sm:pb-20 lg:pb-48 flex flex-col justify-end">
 
       {/* Marca D'Água no fundo */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center pointer-events-none select-none z-0 w-full overflow-hidden">
@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="relative z-10 px-5 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-16 lg:py-12">
 
             {/* Top Section do Card */}
-          <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 mb-12">
+          <div className="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-24 mb-10 sm:mb-12">
 
             {/* Left Area - Logo & Descrição */}
             <div className="max-w-sm">

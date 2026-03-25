@@ -35,7 +35,7 @@ export default function Manifesto() {
   return (
       <section
       id="manifesto"
-      className="bg-[#f4eee0] py-20 md:py-32 lg:py-48 px-4 sm:px-6 min-h-[60vh] flex flex-col justify-center items-center overflow-hidden border-t border-[#161117]/10"
+      className="bg-[#f4eee0] py-16 sm:py-20 md:py-32 lg:py-48 px-4 sm:px-6 min-h-[50vh] sm:min-h-[60vh] flex flex-col justify-center items-center overflow-hidden border-t border-[#161117]/10"
     >
       <div ref={textContainer} className="max-w-[1400px] mx-auto flex flex-col items-center justify-center w-full">
         {/* Title */}
@@ -76,7 +76,7 @@ export default function Manifesto() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 sm:mt-24 w-full flex justify-center"
+          className="mt-8 sm:mt-24 w-full flex justify-center"
         >
           <a
             href={CLIENT.manifesto.linkHref}

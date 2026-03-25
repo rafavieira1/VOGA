@@ -15,7 +15,7 @@ export default function Localizacao() {
   const horarioEntries = Object.entries(CLIENT.horarios);
 
   return (
-    <section id="localizacao" className="py-16 lg:py-32 bg-[#ede7d9]">
+    <section id="localizacao" className="py-14 sm:py-16 lg:py-32 bg-[#ede7d9]">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* TÍTULO CENTRALIZADO NO TOPO */}
         <motion.div
@@ -45,7 +45,7 @@ export default function Localizacao() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           transition={{ staggerChildren: 0.15 }}
-          className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-stretch"
+          className="flex flex-col lg:flex-row gap-10 lg:gap-8 items-stretch"
         >
           {/* Left Column */}
           <motion.div variants={fadeUp} className="w-full lg:w-1/2 flex flex-col pt-0 lg:pr-10">
@@ -101,7 +101,7 @@ export default function Localizacao() {
           </motion.div>
 
           {/* Right Column: Map */}
-          <motion.div variants={fadeUp} className="w-full lg:w-1/2 relative h-[350px] sm:h-[500px] lg:h-[650px] overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] lg:rounded-[3rem] bg-[#ede7d9] border-8 border-[#f4eee0] shadow-2xl">
+          <motion.div variants={fadeUp} className="w-full lg:w-1/2 relative h-[300px] sm:h-[450px] lg:h-[650px] overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] lg:rounded-[3rem] bg-[#ede7d9] border-4 sm:border-8 border-[#f4eee0] shadow-2xl">
             <iframe
               title="Google Maps"
               src={`https://www.google.com/maps?q=${encodeURIComponent(CLIENT.endereco)}&output=embed`}

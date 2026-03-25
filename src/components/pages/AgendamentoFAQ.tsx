@@ -19,7 +19,7 @@ export default function AgendamentoFAQ() {
   };
 
   return (
-    <section id="agendamento" className="relative py-16 lg:py-32 overflow-hidden selection:bg-[#e7b167] selection:text-[#161117]">
+    <section id="agendamento" className="relative py-14 sm:py-16 lg:py-32 overflow-hidden selection:bg-[#e7b167] selection:text-[#161117]">
       
       {/* Imagem de Fundo Enviada */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -50,7 +50,7 @@ export default function AgendamentoFAQ() {
           </div>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-stretch">
           
           {/* LADO ESQUERDO: Título e FAQ */}
           <div className="w-full lg:w-1/2 flex flex-col pt-4">
@@ -135,12 +135,12 @@ export default function AgendamentoFAQ() {
                         placeholder="Nome"
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
-                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
+                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-5 py-3 sm:px-6 sm:py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
                       />
                       <input 
                         type="text" 
                         placeholder="Sobrenome"
-                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
+                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-5 py-3 sm:px-6 sm:py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
                       />
                     </div>
 
@@ -152,7 +152,7 @@ export default function AgendamentoFAQ() {
                         placeholder="Insira o nome do tratamento..."
                         value={servico}
                         onChange={(e) => setServico(e.target.value)}
-                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
+                        className="w-full bg-[#ede7d9] text-[#161117] placeholder:text-[#161117]/40 rounded-full px-5 py-3 sm:px-6 sm:py-4 outline-none focus:ring-2 focus:ring-[#234932]/20 transition-all font-medium text-sm"
                       />
                       <p className="text-xs text-[#999] mt-2 ml-4">Você receberá nosso menu após o contato.</p>
                     </div>

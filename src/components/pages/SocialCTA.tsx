@@ -5,7 +5,7 @@ import fundoverde from "@/assets/fundoverde.png";
 
 export default function SocialCTA() {
   return (
-    <section className="py-16 md:py-24 bg-[#f4eee0]">
+    <section className="py-14 sm:py-16 md:py-24 bg-[#f4eee0]">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* Banner/Card Largo */}
         <motion.div
@@ -13,7 +13,7 @@ export default function SocialCTA() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3rem] overflow-hidden flex flex-col justify-center min-h-[500px] lg:min-h-[600px] shadow-2xl"
+          className="relative w-full rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3rem] overflow-hidden flex flex-col justify-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] shadow-2xl"
         >
           {/* Imagem de Fundo (Cobrindo tudo) */}
           <div className="absolute inset-0 w-full h-full">
@@ -27,7 +27,7 @@ export default function SocialCTA() {
           </div>
 
           {/* Conteúdo de Texto */}
-          <div className="relative z-10 w-full flex flex-col justify-center items-start text-left py-12 px-8 sm:py-16 sm:px-12 lg:py-24 lg:px-20 max-w-2xl xl:max-w-3xl">
+          <div className="relative z-10 w-full flex flex-col justify-center items-start text-left py-10 px-6 sm:py-16 sm:px-12 lg:py-24 lg:px-20 max-w-2xl xl:max-w-3xl">
             {/* Tag */}
             <div className="relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(35,73,50,0.2)] border border-[#e7b167]/30 group mb-6">
               <div className="absolute inset-0 z-0">

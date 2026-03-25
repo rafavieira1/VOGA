@@ -20,7 +20,7 @@ export default function Servicos() {
   const active = categorias.find((c) => c.label === activeTab) ?? categorias[0];
 
   return (
-    <section id="servicos" className="relative py-16 lg:py-32 overflow-hidden">
+    <section id="servicos" className="relative py-14 sm:py-16 lg:py-32 overflow-hidden">
 
       {/* Imagem de Fundo Enviada */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -76,7 +76,7 @@ export default function Servicos() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-stretch"
+            className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-stretch"
           >
             {/* LEFT — Image + Category Title */}
             <div className="lg:w-[45%] flex flex-col gap-8">
@@ -127,7 +127,7 @@ export default function Servicos() {
                       delay: idx * 0.05,
                       ease: "easeOut",
                     }}
-                    className="group py-6 lg:py-8 flex items-start justify-between gap-6 cursor-pointer"
+                    className="group py-5 sm:py-6 lg:py-8 flex items-start justify-between gap-4 sm:gap-6 cursor-pointer"
                   >
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
@@ -146,17 +146,15 @@ export default function Servicos() {
                     </div>
 
                     {/* Arrow */}
-                    <div className="w-10 h-10 rounded-full border-2 border-[#e7b167]/20 flex items-center justify-center shrink-0 mt-1 group-hover:border-[#e7b167] group-hover:bg-[#e7b167] transition-all duration-300">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#e7b167]/20 flex items-center justify-center shrink-0 mt-1 group-hover:border-[#e7b167] group-hover:bg-[#e7b167] transition-all duration-300">
                       <svg
-                        width="18"
-                        height="18"
+                        className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-[#e7b167]/40 group-hover:text-[#234932] transition-colors duration-300 -rotate-45"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-[#e7b167]/40 group-hover:text-[#234932] transition-colors duration-300 -rotate-45"
                       >
                         <path d="M5 12h14" />
                         <path d="m12 5 7 7-7 7" />

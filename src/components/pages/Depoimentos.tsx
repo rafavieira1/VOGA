@@ -16,7 +16,7 @@ const fadeUp = {
 
 export default function Depoimentos() {
   const getCardClasses = (index: number) => {
-    const baseClass = "rounded-2xl p-6 lg:p-8 shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300";
+    const baseClass = "rounded-2xl p-5 sm:p-6 lg:p-8 shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300";
     
     // Card 0: Destacado, escuro, ocupe 2 linhas na esquerda.
     if (index === 0) {
@@ -36,7 +36,7 @@ export default function Depoimentos() {
   };
 
   return (
-    <section id="depoimentos" className="py-16 lg:py-32 bg-[#ede7d9]">
+    <section id="depoimentos" className="py-14 sm:py-16 lg:py-32 bg-[#ede7d9]">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* TÍTULO PADRONIZADO */}
         <motion.div
@@ -67,7 +67,7 @@ export default function Depoimentos() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col md:grid md:grid-cols-4 md:grid-rows-2 gap-4 lg:gap-6 relative z-10"
+          className="flex flex-col md:grid md:grid-cols-4 md:grid-rows-2 gap-3 sm:gap-4 lg:gap-6 relative z-10"
         >
           {CLIENT.depoimentos.map((dep, i) => {
             const initials = dep.nome.substring(0, 2).toUpperCase();
@@ -99,7 +99,7 @@ export default function Depoimentos() {
                 </div>
 
                 {/* Texto do Depoimento */}
-                <p className={`mt-4 lg:mt-6 mb-6 text-base lg:text-lg xl:text-xl font-medium leading-relaxed tracking-tight ${i === 0 ? 'text-white/95' : 'text-[#161117]/90'}`}>
+                <p className={`mt-4 lg:mt-6 mb-6 text-[15px] sm:text-base lg:text-lg xl:text-xl font-medium leading-relaxed tracking-tight ${i === 0 ? 'text-white/95' : 'text-[#161117]/90'}`}>
                   "{dep.texto}"
                 </p>
 

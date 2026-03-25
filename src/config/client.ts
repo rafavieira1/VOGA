@@ -3,7 +3,7 @@ import { Sparkles, Hand, Scissors, Gem, Palette, Brush } from "lucide-react";
 // ─── IMAGENS (substitua pelos arquivos reais do cliente) ─────────────────────
 import heroImage from "@/assets/herosec.png";
 import aboutImage from "@/assets/sobre.jpg";
-import ctaImage from "@/assets/cta.avif";
+import ctaImage from "@/assets/procanto.png";
 import numerosImage from "@/assets/numeros.avif";
 
 // Serviços — imagens das categorias
@@ -81,7 +81,7 @@ export const CLIENT = {
     imagem: aboutImage,
     estatisticas: [
       { valor: 3, label: "Anos de\nExcelência" },
-      { valor: 3000, label: "Clientes\nAtendidos" },
+      { valor: "+3000", label: "Clientes\nAtendidos" },
     ],
   },
 

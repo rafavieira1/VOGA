@@ -58,7 +58,7 @@ export default function Galeria() {
   };
 
   return (
-    <section id="galeria" className="py-16 lg:py-24 bg-[#f4eee0]">
+    <section id="galeria" className="py-14 sm:py-16 lg:py-24 bg-[#f4eee0]">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* HEADER */}
         <motion.div
@@ -95,7 +95,7 @@ export default function Galeria() {
             <motion.div
               key={item.id}
               variants={fadeUp}
-              className="relative aspect-square sm:aspect-[4/3] bg-[#f4eee0] flex flex-col justify-between overflow-hidden group cursor-pointer"
+              className="relative aspect-[4/3] sm:aspect-square md:aspect-[4/3] bg-[#f4eee0] flex flex-col justify-between overflow-hidden group cursor-pointer"
               onClick={() => setLightboxState({ categoryIdx: i, imageIdx: activeIndexes[i] })}
             >
               {/* CORNER TEXT */}
@@ -115,7 +115,7 @@ export default function Galeria() {
 
               {/* CENTER IMAGE LAYOUT */}
               {item.layout === "center" && (
-                <div className="absolute inset-0 flex items-center justify-center p-12 sm:p-20 z-0">
+                <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-12 md:p-20 z-0">
                   <motion.img
                     key={activeIndexes[i]}
                     initial={{ opacity: 0.5 }}
@@ -250,7 +250,7 @@ export default function Galeria() {
                 transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.4 }}
                 src={galleryItems[lightboxState.categoryIdx].images[lightboxState.imageIdx]}
                 alt={galleryItems[lightboxState.categoryIdx].title}
-                className="max-h-[80vh] max-w-[85vw] md:max-w-[70vw] object-contain shadow-2xl bg-white p-2"
+                className="max-h-[80vh] max-w-[92vw] sm:max-w-[85vw] md:max-w-[70vw] object-contain shadow-2xl bg-white p-1 sm:p-2"
                 onClick={(e) => e.stopPropagation()}
               />
             </AnimatePresence>

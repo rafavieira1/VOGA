@@ -20,7 +20,7 @@ export function NavBar({ items, activeTab, onTabChange, className }: NavBarProps
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg",
+        "inline-flex items-center gap-1 sm:gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg",
         className,
       )}
     >
@@ -33,7 +33,7 @@ export function NavBar({ items, activeTab, onTabChange, className }: NavBarProps
             key={item.name}
             onClick={() => onTabChange(item.name)}
             className={cn(
-              "relative cursor-pointer text-sm font-semibold px-4 py-3 sm:px-8 sm:py-4 rounded-full transition-colors",
+              "relative cursor-pointer text-sm font-semibold px-3 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full transition-colors",
               "text-foreground/80 hover:text-primary",
               isActive && "bg-muted text-primary",
             )}

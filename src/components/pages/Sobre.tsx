@@ -15,7 +15,7 @@ export default function Sobre() {
   };
 
   return (
-    <section id="sobre" className="bg-[#f4eee0] py-24 md:py-32 overflow-hidden border-t border-[#234932]/10">
+    <section id="sobre" className="bg-[#f4eee0] py-16 sm:py-24 md:py-32 overflow-hidden border-t border-[#234932]/10">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         <motion.div
           variants={fadeUp}
@@ -45,7 +45,7 @@ export default function Sobre() {
         >
           {/* Left: Titles */}
           <motion.div variants={fadeUp} className="flex-1 w-full lg:text-right relative mt-0 flex flex-col justify-center gap-2">
-            <h2 className="text-[14vw] sm:text-[11vw] lg:text-5xl xl:text-6xl 2xl:text-[6.5rem] font-normal leading-[1.1] tracking-tight text-[#161117] flex flex-col">
+            <h2 className="text-[12vw] sm:text-[11vw] lg:text-5xl xl:text-6xl 2xl:text-[6.5rem] font-normal leading-[1.1] tracking-tight text-[#161117] flex flex-col">
               {CLIENT.sobre.titulos.map((titulo, i) => (
                 <span key={i}>{titulo}</span>
               ))}
@@ -53,7 +53,7 @@ export default function Sobre() {
           </motion.div>
 
           {/* Middle: Image */}
-          <motion.div variants={fadeUp} className="w-full sm:w-[80%] mx-auto lg:w-[320px] xl:w-[420px] shrink-0">
+          <motion.div variants={fadeUp} className="w-full mx-auto lg:w-[320px] xl:w-[420px] shrink-0">
             <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
               <img
                 src={CLIENT.sobre.imagem}
@@ -74,10 +74,10 @@ export default function Sobre() {
             </div>
 
             {/* Stats inline */}
-            <div className="flex items-center gap-10 sm:gap-14 w-full mt-6 lg:mt-0">
+            <div className="flex items-center gap-6 sm:gap-14 w-full mt-6 lg:mt-0">
               {CLIENT.sobre.estatisticas.map((stat, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <span className="text-5xl md:text-6xl xl:text-[5rem] font-black tracking-tighter text-[#161117] leading-none">
+                  <span className="font-['Lora'] font-medium text-4xl sm:text-5xl md:text-6xl xl:text-[5rem] tracking-tighter text-[#161117] leading-none">
                     {stat.valor}
                   </span>
                   <span

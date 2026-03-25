@@ -26,7 +26,7 @@ function AnimatedCounter({ from, to, duration = 2, suffix = "" }: { from: number
 
 export default function Estatisticas() {
   return (
-    <section className="relative w-full min-h-[500px] sm:min-h-[600px] lg:min-h-[600px] flex items-center bg-[#234932] overflow-hidden py-16 lg:py-32">
+    <section className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex items-center bg-[#234932] overflow-hidden py-14 sm:py-16 lg:py-32">
       {/* Background Texture Overlay */}
       <div className="absolute inset-0 w-full h-full opacity-70">
         <img
@@ -57,7 +57,7 @@ export default function Estatisticas() {
           </motion.div>
 
           {/* Numbers Area */}
-          <div className="order-last lg:order-first flex flex-col sm:flex-row gap-12 sm:gap-20 w-full lg:w-3/5">
+          <div className="order-last lg:order-first flex flex-col sm:flex-row gap-8 sm:gap-14 md:gap-20 w-full lg:w-3/5">
             {CLIENT.estatisticas.itens.map((stat, i) => (
               <motion.div
                 key={i}
@@ -67,7 +67,7 @@ export default function Estatisticas() {
                 transition={{ duration: 0.8, delay: i * 0.2 }}
                 className="flex flex-col"
               >
-                <span className="font-['Libre_Caslon_Display'] font-normal text-[60px] sm:text-[80px] md:text-[100px] lg:text-[130px] leading-none text-[#e7b167] tracking-tighter mb-2">
+                <span className="font-['Libre_Caslon_Display'] font-normal text-[48px] sm:text-[70px] md:text-[100px] lg:text-[130px] leading-none text-[#e7b167] tracking-tighter mb-2">
                   <AnimatedCounter from={0} to={stat.valor} suffix={stat.sufixo} />
                 </span>
                 <p className="text-[#f4eee0]/70 font-medium text-lg lg:text-xl tracking-tight">

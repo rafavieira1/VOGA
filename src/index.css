@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DESIGN SYSTEM — VOGA CENTRO ESTÉTICO
+   
+   Paleta oficial:
+   Verde:   #234932  →  HSL: 144 37% 22%
+   Dourado: #e7b167  →  HSL: 35 72% 66%
+   Creme:   #f4eee0  →  HSL: 42 50% 92%
+   Preto:   #161117  →  HSL: 284 17% 9%
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ── Paleta VOGA ── */
+    --salon-primary: 144 37% 22%;       /* #234932 Verde */
+    --salon-secondary: 284 17% 9%;      /* #161117 Preto */
+    --salon-accent: 35 72% 66%;         /* #e7b167 Dourado */
+
+    /* ── Cores derivadas ── */
+    --voga-green: #234932;
+    --voga-gold: #e7b167;
+    --voga-cream: #f4eee0;
+    --voga-black: #161117;
+    --voga-green-light: #2d5f42;
+    --voga-green-dark: #1a3725;
+    --voga-gold-light: #f0c886;
+    --voga-gold-dark: #d9a04e;
+
+    /* ── Tema ── */
+    --background: 42 50% 92%;           /* #f4eee0 Creme */
+    --foreground: 284 17% 9%;           /* #161117 Preto */
+    --card: 42 42% 89%;                 /* Creme mais escuro */
+    --card-foreground: 284 17% 9%;
+    --popover: 42 50% 92%;
+    --popover-foreground: 284 17% 9%;
+    --primary: 144 37% 22%;             /* #234932 Verde */
+    --primary-foreground: 42 50% 92%;   /* Creme sobre verde */
+    --secondary: 35 72% 66%;            /* #e7b167 Dourado */
+    --secondary-foreground: 284 17% 9%; /* Preto sobre dourado */
+    --muted: 42 30% 87%;                /* Creme muted */
+    --muted-foreground: 284 10% 40%;    /* Preto desbotado */
+    --accent: 35 72% 66%;               /* #e7b167 Dourado */
+    --accent-foreground: 284 17% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 42 20% 82%;               /* Borda creme */
+    --input: 42 20% 82%;
+    --ring: 35 72% 66%;                 /* Dourado no ring/focus */
+    --radius: 0.5rem;
+
+    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Raleway', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

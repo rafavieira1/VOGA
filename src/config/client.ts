@@ -1,7 +1,7 @@
 import { Sparkles, Hand, Scissors, Gem, Palette, Brush } from "lucide-react";
 
 // ─── IMAGENS (substitua pelos arquivos reais do cliente) ─────────────────────
-import heroImage from "@/assets/herosec.avif";
+import heroImage from "@/assets/heroupscale.avif";
 import aboutImage from "@/assets/sobre.avif";
 import ctaImage from "@/assets/procanto.avif";
 

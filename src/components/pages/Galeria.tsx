@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, X } from "lucide-react";
 import { CLIENT } from "@/config/client";
-import { BadgeGlass } from "@/components/ui/badge-glass";
+import fundoverde from "@/assets/fundoverde.png";
 
 const galleryItems = CLIENT.galeria;
 
@@ -59,7 +59,7 @@ export default function Galeria() {
 
   return (
     <section id="galeria" className="py-16 lg:py-24 bg-[#f4eee0]">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,16 @@ export default function Galeria() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center text-center mb-16 lg:mb-24"
         >
-          <BadgeGlass className="mb-6">Galeria</BadgeGlass>
+          {/* Custom Badge based on User request using fundoverde.png */}
+          <div className="relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(35,73,50,0.2)] border border-[#e7b167]/30 group mb-6">
+            <div className="absolute inset-0 z-0">
+              <img src={fundoverde} alt="Fundo Textura" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[2px]" />
+            </div>
+            <span className="relative z-10 text-[#f4eee0] font-medium tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-[#e7b167]">
+              Galeria
+            </span>
+          </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#161117] leading-[1.1]">
             Nosso Trabalho
           </h2>
@@ -91,9 +100,9 @@ export default function Galeria() {
             >
               {/* CORNER TEXT */}
               <div
-                className={`absolute top-6 sm:top-8 z-20 pointer-events-none ${item.layout === "left"
-                  ? "right-6 sm:right-8 text-right"
-                  : "left-6 sm:left-8 text-left"
+                className={`absolute top-10 sm:top-14 z-20 pointer-events-none flex flex-col items-center text-center ${item.layout === "left"
+                  ? "right-0 w-[45%] sm:w-[50%]"
+                  : "left-0 w-[45%] sm:w-[50%]"
                   }`}
               >
                 <h3 className="font-display font-bold tracking-tight text-xl sm:text-2xl text-[#161117] mb-1">
@@ -158,8 +167,8 @@ export default function Galeria() {
 
               {/* BOTTOM CONTROLS (Dots and Arrows) */}
               <div
-                className={`absolute bottom-6 sm:bottom-8 flex items-center gap-5 sm:gap-8 z-30 ${
-                  item.layout === "right" ? "left-6 sm:left-8" : "right-6 sm:right-8"
+                className={`absolute bottom-8 sm:bottom-12 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 z-30 ${
+                  item.layout === "right" ? "left-0 w-[45%] sm:w-[50%]" : "right-0 w-[45%] sm:w-[50%]"
                 }`}
               >
                 {/* Arrows Funcionais */}

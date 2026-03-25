@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import { BadgeGlass } from "@/components/ui/badge-glass";
 import fundoverde from "@/assets/fundoverde.png";
 
 export default function AgendamentoFAQ() {
@@ -15,9 +14,8 @@ export default function AgendamentoFAQ() {
 
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    const mensagem = `Olá! Meu nome é ${nome}. Gostaria de agendar um horário para o serviço de *${servico || "Avaliação"}* no período da *${periodo}*.`;
-    const url = `https://wa.me/${CLIENT.whatsapp}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
+    // Custom message omitted as the config link is a direct API shortlink.
+    window.open(CLIENT.whatsappLink, '_blank');
   };
 
   return (
@@ -34,7 +32,7 @@ export default function AgendamentoFAQ() {
         <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[4px]" />
       </div>
 
-      <div className="container mx-auto px-6 max-w-[1400px] relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px] relative z-10">
         
         {/* TÍTULO PADRONIZADO CENTRALIZADO NO TOPO */}
         <motion.div
@@ -44,7 +42,12 @@ export default function AgendamentoFAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-24 flex justify-center"
         >
-          <BadgeGlass className="mb-10">Dúvidas e Reservas</BadgeGlass>
+          {/* Custom Creme Badge */}
+          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full mb-10 bg-[#f4eee0] shadow-sm border border-[#e7b167]/30">
+            <span className="text-[#234932] font-semibold tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap">
+              Dúvidas e Reservas
+            </span>
+          </div>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-24 items-stretch">

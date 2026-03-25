@@ -15,11 +15,11 @@ const serviceLinks = [
 
 const contactLinks = [
   { label: "Localização", href: "#localizacao" },
-  { label: "WhatsApp", href: `https://wa.me/${CLIENT.whatsapp}` },
+  { label: "WhatsApp", href: CLIENT.whatsappLink },
 ];
 
 export default function Footer() {
-  const whatsappUrl = `https://wa.me/${CLIENT.whatsapp}`;
+  const whatsappUrl = CLIENT.whatsappLink;
 
   return (
     <footer className="relative overflow-hidden bg-[#ede7d9] pt-12 lg:pt-24 pb-20 lg:pb-48 flex flex-col justify-end">
@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
 
       {/* Container principal para o card */}
-      <div className="container mx-auto px-6 max-w-[1400px] relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px] relative z-10">
         {/* Card Principal */}
         <div className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] shadow-[0_8px_40px_rgba(35,73,50,0.15)] border border-[#e7b167]/20">
           

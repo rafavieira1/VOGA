@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import { BadgeGlass } from "@/components/ui/badge-glass";
+import fundoverde from "@/assets/fundoverde.png";
 
 export default function SocialCTA() {
   return (
     <section className="py-16 md:py-24 bg-[#f4eee0]">
-      <div className="container mx-auto px-6 max-w-[1400px]">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* Banner/Card Largo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98, y: 30 }}
@@ -29,8 +29,14 @@ export default function SocialCTA() {
           {/* Conteúdo de Texto */}
           <div className="relative z-10 w-full flex flex-col justify-center items-start text-left py-12 px-8 sm:py-16 sm:px-12 lg:py-24 lg:px-20 max-w-2xl xl:max-w-3xl">
             {/* Tag */}
-            <div className="flex justify-start mb-6">
-              <BadgeGlass variant="dark">Fique Por Dentro</BadgeGlass>
+            <div className="relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(35,73,50,0.2)] border border-[#e7b167]/30 group mb-6">
+              <div className="absolute inset-0 z-0">
+                <img src={fundoverde} alt="Fundo Textura" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[2px]" />
+              </div>
+              <span className="relative z-10 text-[#f4eee0] font-medium tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-[#e7b167]">
+                Fique Por Dentro
+              </span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-normal tracking-tight text-white leading-[1.1] mb-6 drop-shadow-md">
@@ -54,7 +60,7 @@ export default function SocialCTA() {
               <FlowButton
                 text="Fale no WhatsApp"
                 variant="light"
-                href={`https://wa.me/${CLIENT.whatsapp}`}
+                href={CLIENT.whatsappLink}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-[240px] md:w-[260px]"

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CLIENT } from "@/config/client";
-import { BadgeGlass } from "@/components/ui/badge-glass";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import fundoverde from "@/assets/fundoverde.png";
 
@@ -34,7 +33,7 @@ export default function Servicos() {
         <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[4px]" />
       </div>
 
-      <div className="container mx-auto px-6 max-w-[1500px] relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1500px] relative z-10">
         {/* ── HEADER ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +42,12 @@ export default function Servicos() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center text-center mb-8 lg:mb-16"
         >
-          <BadgeGlass className="mb-6">O que oferecemos</BadgeGlass>
+          {/* Custom Creme Badge */}
+          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full mb-6 bg-[#f4eee0] shadow-sm border border-[#e7b167]/30">
+            <span className="text-[#234932] font-semibold tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap">
+              O que oferecemos
+            </span>
+          </div>
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#e7b167] leading-[1.1]">
             Nossos serviços
           </h2>
@@ -68,10 +72,10 @@ export default function Servicos() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-stretch"
           >
             {/* LEFT — Image + Category Title */}
@@ -119,16 +123,23 @@ export default function Servicos() {
                     initial={{ opacity: 0, x: 15 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
-                      duration: 0.35,
-                      delay: idx * 0.08,
-                      ease: [0.16, 1, 0.3, 1],
+                      duration: 0.3,
+                      delay: idx * 0.05,
+                      ease: "easeOut",
                     }}
                     className="group py-6 lg:py-8 flex items-start justify-between gap-6 cursor-pointer"
                   >
                     <div className="flex-1">
-                      <h4 className="text-xl lg:text-2xl font-bold uppercase tracking-tight text-[#f4eee0] mb-2 group-hover:text-[#e7b167] transition-colors duration-300">
-                        {servico.nome}
-                      </h4>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h4 className="text-xl lg:text-2xl font-bold uppercase tracking-tight text-[#f4eee0] group-hover:text-[#e7b167] transition-colors duration-300">
+                          {servico.nome}
+                        </h4>
+                        {(servico as any).preco && (
+                          <span className="text-sm lg:text-base font-semibold text-[#e7b167] px-3 py-1 rounded-full bg-[#e7b167]/10 whitespace-nowrap self-start sm:self-auto border border-[#e7b167]/20">
+                            {(servico as any).preco}
+                          </span>
+                        )}
+                      </div>
                       <p className="text-[#f4eee0]/60 text-sm leading-relaxed max-w-md">
                         {servico.descricao}
                       </p>

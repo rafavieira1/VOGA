@@ -1,7 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import { BadgeGlass } from "@/components/ui/badge-glass";
+import fundoverde from "@/assets/fundoverde.png";
 
 export default function Sobre() {
   const container: Variants = {
@@ -16,7 +16,7 @@ export default function Sobre() {
 
   return (
     <section id="sobre" className="bg-[#f4eee0] py-24 md:py-32 overflow-hidden border-t border-[#234932]/10">
-      <div className="container mx-auto px-6 max-w-[1400px]">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -24,7 +24,16 @@ export default function Sobre() {
           viewport={{ once: true }}
           className="w-full flex justify-center mb-16"
         >
-          <BadgeGlass>Sobre Nós</BadgeGlass>
+          {/* Custom Badge based on User request using fundoverde.png */}
+          <div className="relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(35,73,50,0.2)] border border-[#e7b167]/30 group">
+            <div className="absolute inset-0 z-0">
+              <img src={fundoverde} alt="Fundo Textura" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[2px]" />
+            </div>
+            <span className="relative z-10 text-[#f4eee0] font-medium tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-[#e7b167]">
+              Sobre Nós
+            </span>
+          </div>
         </motion.div>
 
         <motion.div
@@ -45,11 +54,11 @@ export default function Sobre() {
 
           {/* Middle: Image */}
           <motion.div variants={fadeUp} className="w-full sm:w-[80%] mx-auto lg:w-[320px] xl:w-[420px] shrink-0">
-            <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4]">
+            <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
               <img
                 src={CLIENT.sobre.imagem}
                 alt={`Sobre ${CLIENT.nome}`}
-                className="w-full h-full object-cover shadow-sm bg-gray-100"
+                className="w-full h-full object-cover shadow-sm scale-[1.12]"
               />
             </div>
           </motion.div>

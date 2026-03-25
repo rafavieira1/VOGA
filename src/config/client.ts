@@ -2,28 +2,28 @@ import { Sparkles, Hand, Scissors, Gem, Palette, Brush } from "lucide-react";
 
 // ─── IMAGENS (substitua pelos arquivos reais do cliente) ─────────────────────
 import heroImage from "@/assets/herosec.png";
-import aboutImage from "@/assets/foto1.jpg";
+import aboutImage from "@/assets/sobre.jpg";
 import ctaImage from "@/assets/cta.avif";
 import numerosImage from "@/assets/numeros.avif";
 
 // Serviços — imagens das categorias
-import cuidadosImg from "@/assets/cuidados.avif";
-import rituaisImg from "@/assets/rituaiscorporais.avif";
-import capilaresImg from "@/assets/foto4.jpg";
+import cuidadosImg from "@/assets/maquiagem.jpg";
+import rituaisImg from "@/assets/unhas.jpg";
+import capilaresImg from "@/assets/serviçocabelo.jpg";
 
 // Galeria
-import skin1 from "@/assets/skin1.avif";
-import skin2 from "@/assets/skin2.avif";
-import skin3 from "@/assets/skin3.avif";
-import loiro1 from "@/assets/loiro1.avif";
-import loiro2 from "@/assets/loiro2.avif";
-import loiro3 from "@/assets/loiro3.avif";
-import make1 from "@/assets/make1.avif";
-import make2 from "@/assets/make2.avif";
-import make3 from "@/assets/make3.avif";
-import spa1 from "@/assets/spa1.avif";
-import spa2 from "@/assets/spa2.avif";
-import spa3 from "@/assets/spa3.avif";
+import skin1 from "@/assets/sobrancelha1.jpg";
+import skin2 from "@/assets/sobrancelha2.jpg";
+import skin3 from "@/assets/sobrancelha3.jpg";
+import loiro1 from "@/assets/loiro1.jpg";
+import loiro2 from "@/assets/loiro2.jpg";
+import loiro3 from "@/assets/loiro3.jpg";
+import make1 from "@/assets/maquiagem1.jpg";
+import make2 from "@/assets/maquiagem2.jpg";
+import make3 from "@/assets/maquiagem3.jpg";
+import spa1 from "@/assets/unhas.jpg";
+import spa2 from "@/assets/unha2.jpg";
+import spa3 from "@/assets/unha3.jpg";
 
 // ─── TIPOS ───────────────────────────────────────────────────────────────────
 type GaleriaLayout = "left" | "right" | "center";
@@ -46,15 +46,15 @@ export const CLIENT = {
   nome: "VOGA",
   slogan: "Você em evidência — Cabelo, Barbearia, Unhas, Estética e bem-estar",
   cidade: "Medianeira, PR",
-  whatsapp: "5545999999999",
+  whatsapp: "5545999999999", // Mantido para Schema SEO interno
+  whatsappLink: "https://api.whatsapp.com/message/JK5LZRY4PK7AE1?autoload=1&app_absent=0",
   instagram: "@vogacentroestetico",
-  facebook: "", // ex: "vogacentroestetico" (deixe vazio para ocultar)
+  facebook: "voga.byaurora", // ex: "vogacentroestetico" (deixe vazio para ocultar)
   endereco: "Av. Brasília, 1032 — Centro, Medianeira - PR",
 
   horarios: {
-    "Segunda a Sexta": "09h às 19h",
-    "Sábado": "09h às 17h",
-    "Domingo": "Fechado",
+    "Terça a Sábado": "07:00 às 20:00",
+    "Domingo e Segunda": "Fechado",
   } as Record<string, string>,
 
   // ── Hero ───────────────────────────────────────────────────────────────────
@@ -89,13 +89,16 @@ export const CLIENT = {
   servicos: [
     { icone: "scissors", nome: "Corte Feminino", descricao: "Cortes modernos e personalizados que valorizam sua identidade" },
     { icone: "scissors", nome: "Corte Masculino", descricao: "Barbearia com estilo — cortes e acabamentos impecáveis" },
+    { icone: "scissors", nome: "Barba", descricao: "Design de barba com toalha quente e acabamento perfeito" },
+    { icone: "sparkles", nome: "Escova", descricao: "Escovação profissional para um acabamento duradouro" },
     { icone: "sparkles", nome: "Coloração & Mechas", descricao: "Técnicas modernas com produtos de alta performance" },
-    { icone: "hand", nome: "Manicure & Pedicure", descricao: "Unhas impecáveis com acabamento profissional e esmaltação em gel" },
-    { icone: "eye", nome: "Sobrancelhas", descricao: "Design e micropigmentação que valorizam o seu olhar" },
+    { icone: "hand", nome: "Manicure (Mão)", descricao: "Unhas impecáveis com acabamento profissional" },
+    { icone: "hand", nome: "Pedicure", descricao: "Cuidados completos para os pés com esmaltação em gel" },
+    { icone: "eye", nome: "Designer de Sobrancelhas", descricao: "Design que valoriza o formato do seu rosto e olhar" },
     { icone: "star", nome: "Maquiagem", descricao: "Make profissional para eventos, noivas e dia a dia" },
     { icone: "sparkles", nome: "Limpeza de Pele", descricao: "Renovação celular e remoção de impurezas profundas" },
     { icone: "zap", nome: "Terapia Capilar", descricao: "Tratamentos avançados para saúde e vitalidade dos fios" },
-    { icone: "eye", nome: "Brow & Lashes", descricao: "Extensão de cílios e design de sobrancelhas com técnicas premium" },
+    { icone: "eye", nome: "Extensão de Cílios", descricao: "Técnicas premium de alongamento para o seu olhar" },
   ],
 
   categoriasServicos: [
@@ -104,7 +107,7 @@ export const CLIENT = {
       label: "Estética & Bem-estar",
       title: "Estética\n& bem-estar",
       icon: Sparkles,
-      filtro: ["Sobrancelhas", "Maquiagem", "Limpeza de Pele", "Brow & Lashes"],
+      filtro: ["Designer de Sobrancelhas", "Extensão de Cílios", "Maquiagem", "Limpeza de Pele"],
       imagem: cuidadosImg,
       descricao:
         "Realce o que há de mais bonito em você. Nossos tratamentos combinam técnicas avançadas com produtos selecionados para resultados que transformam.",
@@ -114,7 +117,7 @@ export const CLIENT = {
       label: "Cabelo & Barbearia",
       title: "Cabelo\n& barbearia",
       icon: Scissors,
-      filtro: ["Corte Feminino", "Corte Masculino", "Coloração & Mechas", "Terapia Capilar"],
+      filtro: ["Corte Feminino", "Corte Masculino", "Escova", "Coloração & Mechas"],
       imagem: capilaresImg,
       descricao:
         "Fios saudáveis, cortes precisos e cores vibrantes. Cada detalhe é pensado para que seu cabelo conte a sua história com autenticidade.",
@@ -124,7 +127,7 @@ export const CLIENT = {
       label: "Unhas & Acabamentos",
       title: "Unhas\n& acabamentos",
       icon: Hand,
-      filtro: ["Manicure & Pedicure"],
+      filtro: ["Manicure (Mão)", "Pedicure"],
       imagem: rituaisImg,
       descricao:
         "Unhas impecáveis com esmaltação em gel, nail art e acabamentos que refletem seu estilo pessoal com excelência.",
@@ -134,30 +137,30 @@ export const CLIENT = {
   // ── Galeria ────────────────────────────────────────────────────────────────
   galeria: [
     {
-      id: "skin",
-      title: "Skin Glow",
-      subtitle: "Tratamentos Faciais",
-      images: [skin1, skin2, skin3],
+      id: "cabelo",
+      title: "Loiros & Coloração",
+      subtitle: "Mechas, Cortes & Escovas",
+      images: [loiro1, loiro2, loiro3],
       layout: "left",
     },
     {
-      id: "loiro",
-      title: "Loiro Perfeito",
-      subtitle: "Mechas & Tonalização",
-      images: [loiro1, loiro2, loiro3],
+      id: "olhar",
+      title: "Cílios & Sobrancelhas",
+      subtitle: "Sobrancelhas & Cílios Premium",
+      images: [skin1, skin2, skin3],
       layout: "right",
     },
     {
       id: "make",
-      title: "Make Glamour",
-      subtitle: "Maquiagem Profissional",
+      title: "Maquiagem",
+      subtitle: "Maquiagem para Eventos",
       images: [make1, make2, make3],
       layout: "left",
     },
     {
-      id: "spa",
-      title: "Spa Relax",
-      subtitle: "Rituais de Beleza",
+      id: "unhas",
+      title: "Unhas",
+      subtitle: "Manicure & Pedicure em Gel",
       images: [spa1, spa2, spa3],
       layout: "right",
     },
@@ -170,35 +173,28 @@ export const CLIENT = {
       papel: "Cliente Fiel",
       avatar: "https://i.pravatar.cc/150?img=47",
       nota: 5,
-      texto: "O VOGA superou todas as minhas expectativas. O ambiente é lindo, acolhedor e os profissionais são incríveis. Me sinto em casa toda vez que vou.",
+      texto: "Hoje eu tive o prazer de conhecer o salão VOGA. Que aconchego!! Fui muito bem recebida os profissionais foram maravilhosos super atenciosos.A profissional Ruth foi quem me atendeu para corte e eu simplesmente amei. Entendeu o que eu realmente queria fazer. E ficou maravilhoooosoooo!!! Super indico",
     },
     {
-      nome: "Juliana M.",
-      papel: "Noiva",
+      nome: "Luciana Simon",
+      papel: "Cliente",
       avatar: "https://i.pravatar.cc/150?img=43",
       nota: 5,
-      texto: "Fiz meu dia da noiva no VOGA e foi uma experiência mágica. Profissionalismo e cuidado em cada detalhe. Super recomendo!",
+      texto: "Já sou cliente da Ruth há anos. Ele realiza os procedimentos de corte, coloração de raiz e mechas no meu cabelo. Excelente profissional, realiza um trabalho impecável.",
     },
     {
-      nome: "Camila R.",
-      papel: "Empresária",
+      nome: "Adriana Wahl",
+      papel: "Cliente",
       avatar: "https://i.pravatar.cc/150?img=32",
       nota: 5,
-      texto: "É meu refúgio semanal. A equipe do VOGA sabe exatamente o que fazer pra me desconectar da correria do dia a dia.",
+      texto: "Tratamento excelente, ótimos profissionais, espaço agradável. Fiz corte e pintura nos meus cabelos e ficou exatamente como queria. Fiz sobrancelhas também, super recomendo, muito cuidadosos.",
     },
     {
-      nome: "Beatriz L.",
+      nome: "Natalyria Mittmann",
       papel: "Cliente",
       avatar: "https://i.pravatar.cc/150?img=5",
       nota: 5,
-      texto: "Os resultados que tive com os tratamentos de pele foram maravilhosos. O espaço é lindíssimo e o atendimento é impecável!",
-    },
-    {
-      nome: "Fernanda S.",
-      papel: "Cliente Frequente",
-      avatar: "https://i.pravatar.cc/150?img=44",
-      nota: 5,
-      texto: "Me sinto outra pessoa depois de cada visita ao VOGA. É com certeza o melhor investimento em mim mesma.",
+      texto: "Atendimento excelente. O ambiente está lindo e a energia dos profissionais é maravilhosa. Rudinei é incrível! Meu cabeleireiro há anos, entende meu estilo e o que eu gosto, me dá ótimas dicas e sempre supera minhas expectativas. Recomendo de verdade!",
     },
   ],
 

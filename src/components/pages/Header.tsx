@@ -30,7 +30,7 @@ export default function Header() {
     setIsScrolled(latest > 100);
   });
 
-  const whatsappUrl = `https://wa.me/${CLIENT.whatsapp}?text=Olá! Gostaria de agendar um horário.`;
+  const whatsappUrl = CLIENT.whatsappLink;
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 w-full">

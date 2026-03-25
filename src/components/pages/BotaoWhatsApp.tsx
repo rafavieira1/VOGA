@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { CLIENT } from "@/config/client";
 
 export default function BotaoWhatsApp() {
-  const whatsappUrl = `https://wa.me/${CLIENT.whatsapp}?text=Olá! Gostaria de mais informações.`;
+  const whatsappUrl = CLIENT.whatsappLink;
 
   return (
     <a

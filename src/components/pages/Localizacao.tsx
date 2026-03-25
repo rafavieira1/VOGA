@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { CLIENT } from "@/config/client";
 import { FlowButton } from "@/components/ui/flow-button";
-import { BadgeGlass } from "@/components/ui/badge-glass";
+import fundoverde from "@/assets/fundoverde.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -9,14 +9,14 @@ const fadeUp = {
 };
 
 export default function Localizacao() {
-  const whatsappUrl = `https://wa.me/${CLIENT.whatsapp}?text=Olá! Pode me ensinar como chegar no espaço da ${CLIENT.nome}?`;
+  const whatsappUrl = CLIENT.whatsappLink;
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLIENT.endereco)}`;
 
   const horarioEntries = Object.entries(CLIENT.horarios);
 
   return (
     <section id="localizacao" className="py-16 lg:py-32 bg-[#ede7d9]">
-      <div className="container mx-auto px-6 max-w-[1400px]">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 max-w-[1400px]">
         {/* TÍTULO CENTRALIZADO NO TOPO */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,16 @@ export default function Localizacao() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center text-center mb-16 lg:mb-24"
         >
-          <BadgeGlass className="mb-6">Localização</BadgeGlass>
+          {/* Custom Badge based on User request using fundoverde.png */}
+          <div className="relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(35,73,50,0.2)] border border-[#e7b167]/30 group mb-6">
+            <div className="absolute inset-0 z-0">
+              <img src={fundoverde} alt="Fundo Textura" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-[#234933]/70 backdrop-blur-[2px]" />
+            </div>
+            <span className="relative z-10 text-[#f4eee0] font-medium tracking-widest text-[10px] sm:text-[11px] uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-[#e7b167]">
+              Localização
+            </span>
+          </div>
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#161117] leading-[1.1]">
             Onde nos encontrar
           </h2>
